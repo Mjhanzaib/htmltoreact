@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostListItem = (props) => {
+const PostListItem2= (props) => {
     const { title, image, author, category, date, readTime, classes } = props;
     return (
         <div className={`post-entry-2 d-flex ${classes}`}>
@@ -16,4 +16,4 @@ const PostListItem = (props) => {
     );
 }
 
-export default PostListItem;
+export default PostListItem2;
