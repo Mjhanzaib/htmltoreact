@@ -2,7 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
-import PostListItem from './components/PostListItem';
+import PostListItem from './components/PostListItem.js';
+import Slider from './components/slider';
+import popularPosts from './components/trending';
+import Trending from './components/trending';
+import PostEntry from'./components/postentry';
+import Recentnews from './components/recentnews';
 
 function App() {
   return (
@@ -23,7 +28,7 @@ function App() {
             <div className="row align-items-center">
               <div className="col-12 col-lg-6 d-flex">
                 <a href="index.html" className="site-logo">
-                  Meranda
+                  Meranda in React
         </a>
 
                 <a href="#" className="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
@@ -51,10 +56,6 @@ function App() {
               </div>
             </div>
           </div>
-
-
-
-
           <div className="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
 
             <div className="container">
@@ -94,53 +95,15 @@ function App() {
           </div>
 
         </div>
-
         <div className="site-section py-0">
           <div className="owl-carousel hero-slide owl-style">
-
-            <div className="site-section">
-              <div className="container">
-                <div className="half-post-entry d-block d-lg-flex bg-light">
-                  <div className="img-bg" style={{ backgroundImage: "url('images/big_img_1.jpg')" }}></div>
-                  <div className="contents">
-                    <span className="caption">Editor's Pick</span>
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
-
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="site-section">
-              <div className="container">
-                <div className="half-post-entry d-block d-lg-flex bg-light">
-                  <div className="img-bg" style={{ backgroundImage: "url('images/big_img_1.jpg')" }}></div>
-                  <div className="contents">
-                    <span className="caption">Editor's Pick</span>
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
-
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-
-
+             
+                < Slider  image='images/big_img_1.jpg' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='2020' readTime='2 min' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?' catagory='react language' />
+                   < Slider  image='images/big_img_1.jpg'title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='2020' readTime='2 min' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?' catagory='react language' />
+               </div>
+            </div> 
+          
+        
         <div className="site-section">
           <div className="container">
             <div className="row">
@@ -176,50 +139,10 @@ function App() {
                   <h2>Trending</h2>
                 </div>
 
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">01</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">02</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">03</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">04</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
+                <Trending number='01' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='02'title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='03'title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='04'title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
                 <p>
                   <a href="#" className="more">See All Trends <span className="icon-keyboard_arrow_right"></span></a>
                 </p>
@@ -230,24 +153,8 @@ function App() {
         </div>
 
 
-        <div className="py-0">
-          <div className="container">
-            <div className="half-post-entry d-block d-lg-flex bg-light">
-              <div className="img-bg" style={{ backgroundImage: "url('images/big_img_1.jpg')" }}></div>
-              <div className="contents">
-                <span className="caption">Editor's Pick</span>
-                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+        < Slider  image='images/big_img_1.jpg'title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='2020' readTime='2 min' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?' catagory='react language' />
 
-                <div className="post-meta">
-                  <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
-                  <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="site-section">
           <div className="container">
@@ -256,77 +163,20 @@ function App() {
                 <div className="section-title">
                   <h2>Politics</h2>
                 </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_1.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_2.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_3.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_1.jpg'/>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_2.jpg'/>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_3.jpg'/>
+
+                
               </div>
               <div className="col-lg-6">
                 <div className="section-title">
                   <h2>Business</h2>
                 </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_1.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_2.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail" style={{ backgroundImage: "url('images/img_v_3.jpg')" }}></div>
-                  <div className="contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_3.jpg'/>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_1.jpg'/>
+                <PostEntry title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' catagory='react language' image='images/img_v_2.jpg'/>
+
               </div>
             </div>
           </div>
@@ -341,91 +191,24 @@ function App() {
                 <div className="section-title">
                   <h2>Recent News</h2>
                 </div>
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail order-md-2" style={{ backgroundImage: "url('images/img_h_4.jpg')" }}></div>
-                  <div className="contents order-md-1 pl-0">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail order-md-2" style={{ backgroundImage: "url('images/img_v_3.jpg')" }}></div>
-                  <div className="contents order-md-1 pl-0">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
+                <Recentnews title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' category='react language' image='images/img_v_3.jpg'/>
+                <Recentnews title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' category='react language' image='images/img_v_1.jpg'/>
+                <Recentnews title='News Needs to Meet Its Audiences Where They Are' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.' author='jhanzaib' date='april 23' readTime ='5 min read' category='react language' image='images/img_v_2.jpg'/>
 
-                <div className="post-entry-2 d-flex">
-                  <div className="thumbnail order-md-2" style={{ backgroundImage: "url('images/img_v_3.jpg')" }}></div>
-                  <div className="contents order-md-1 pl-0">
-                    <span className="caption mb-4 d-block">Editor's Pick</span>
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <p className="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
+
+                
+
               </div>
               <div className="col-lg-3">
                 <div className="section-title">
                   <h2>Popular Posts</h2>
                 </div>
 
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">01</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">02</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex">
-                  <div className="number align-self-start">03</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="trend-entry d-flex pl-0">
-                  <div className="number align-self-start">04</div>
-                  <div className="trend-contents">
-                    <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                    <div className="post-meta">
-                      <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                      <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
+                <Trending number='01' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='02' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='03' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
+                <Trending number='04' title='News Needs to Meet Its Audiences Where They Are' author='jhanzaib' date='april 23' readTime ='3 min read ' category='News'   />
 
                 <p>
                   <a href="#" className="more">See All Popular <span className="icon-keyboard_arrow_right"></span></a>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostListItem2= (props) => {
+const PostListItem= (props) => {
     const { title, image, author, category, date, readTime, classes } = props;
     return (
         <div className={`post-entry-2 d-flex ${classes}`}>
@@ -12,8 +12,9 @@ const PostListItem2= (props) => {
                     <span className="date-read">{date} <span className="mx-1">&bullet;</span> {readTime} read <span className="icon-star2"></span></span>
                 </div>
             </div>
-        </div>
+            </div>
+
     );
 }
 
-export default PostListItem2;
+export default PostListItem;
